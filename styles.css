@@ -1,0 +1,70 @@
+body {
+    background-color: #eeddd6;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+    body {
+        background-image: url('people2.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .box {
+        width: 30%;
+    }
+}
+
+h2 {
+    color: #207637;
+    font-weight: 700;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.box {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20vh auto;
+    padding: 30px;
+}
+
+.btn-style {
+    border: thin solid #fff;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.btn-style:hover {
+    background-color: #207637;
+    color: #fff;
+}
+
+/* atomic */
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.m-10 {
+    margin: 10px 0;
+}
+
+.m-10-auto {
+    margin: 10px auto;
+}

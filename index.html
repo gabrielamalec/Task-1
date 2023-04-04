@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recruitment task for Esatto</title>
+</head>
+<body>
+    <div class="box">
+        <nav id="nav-btns" class="d-flex-col">
+            <h2>Choose what you want to do!</h2>
+            <button type="button" id="addCustomer" class="btn-style btn-add">Add new customer</button>
+            <button type="button" id="editCustomer" class="btn-style">Edit customer</button>
+            <button type="button" id="deleteCustomer" class="btn-style">Delete customer</button>
+            <button type="button" id="showCustomer" class="btn-style" onclick=showCustomer()>Show list of customers</button>
+        </nav>
+        <div id="addCustomerBox" class="d-none">
+            <a href="#" class="home"><img width=25px src="back-arrow.svg"/></a>
+            <h3>Add new customer</h3>
+            <form id="addCustomerForm" class="d-flex-col w-75">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" minlength="3" maxlength="12" class="m-10" required>
+                <label for="vatNum">VAT identification number: </label>
+                <input type="text" id="vatNum" name="vatNum" minlength="8" maxlength="12" class="m-10" required>
+                <label for="address">Address: </label>
+                <input type="text" id="address" name="address" minlength="8" class="m-10" required>
+                <!-- <label for="creationDate">Creation date: </label>
+                <input type="text" id="creationDate" name="creationDate"> -->
+                <button type="submit" id="formSubmit" onclick=addCustomer() class="btn-style w-50 m-10-auto">Submit!</button>
+            </form>    
+        </div>
+        <div id="editCustomerBox" class="d-none">
+            <a href="#" class="home"><img width=25px src="back-arrow.svg"/></a>
+            <h3>Edit a customer</h3>
+            <input type="text" id="editCustomerChoice" placeholder="Input personal VAT number">
+            <button type="submit" id="editCustomerSubmit" onclick=editCustomer() class="btn-style w-50 m-10-auto">Submit!</button>
+            <div id="editCustomerInputs" class="d-none">
+                <label for="name">New name:</label>
+                <input type="text" id="name-edit" name="name" minlength="3" maxlength="12" class="m-10" required>
+                <label for="address">New address: </label>
+                <input type="text" id="address-edit" name="address" minlength="8" class="m-10" required>
+                <button type="submit" id="editCustomerInputsSubmit" onclick=editCustomer() class="btn-style w-50 m-10-auto">Submit!</button>
+            </div>
+        </div>
+        <div id="deleteCustomerBox" class="d-none">
+            <a href="#" class="home"><img width=25px src="back-arrow.svg"/></a>
+            <h3>Delete a customer</h3>
+            <input type="text" id="deleteCustomerChoice" placeholder="Input personal VAT number">
+            <button type="submit" id="deleteCustomerSubmit" onclick=deleteCustomer() class="btn-style">Submit!</button>
+        </div>
+        <div id="showCustomerBox" class="d-none">
+            <a href="#" class="home" onclick=showCustomer()><img width=25px src="back-arrow.svg"/></a>
+            <h3>List of created customers</h3> 
+            Name - VAT number - Address - Date
+            <ol id="list-customers">
+                <!-- <li id="list-customers-item"></li> -->
+            </ol>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
