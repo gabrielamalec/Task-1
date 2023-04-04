@@ -1,6 +1,7 @@
 # Recruitment-task
-* [Description](#description)
-* [Next steps](#next-steps)
+## Table of contents
+* [Description]
+* [Next steps]
 
 ## Description
 ## Next steps
