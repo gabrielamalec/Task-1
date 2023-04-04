@@ -2,8 +2,6 @@
 
 ## Description
 
-
-
 The application allows adding, editing and deleting customers, as well as displaying the current list of them.
 
 ## Next steps
